@@ -1,9 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="json.ui">
   <head>
     <title>Json-UI</title>
+    <link rel="stylesheet" type="text/css" href="css/json_ui.css" />
   </head>
-
   <body>
-  
+
+    <div class="json_ui">
+      <h3>json-ui</h3><hr/>
+    </div>
+
+    <div class="raw_json">
+      <h3>raw-json</h3><hr/>
+      <div id="editor"></div> 
+    </div>
+    
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/editor.js"></script>
+    <script type="text/javascript" src="js/json_ui.js"></script>
   </body>
 </html>

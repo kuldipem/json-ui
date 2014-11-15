@@ -1,0 +1,28 @@
+html, body {
+  font: 100% Helvetica, sans-serif;
+  height: 100%; }
+
+h3 {
+  margin-left: 15px;
+  color: #00a79d; }
+
+hr {
+  border: 3px solid rgba(0, 167, 157, 0.4);
+  margin: 0px; }
+
+.json_ui, .raw_json {
+  width: 47%;
+  float: left;
+  height: 100%;
+  border: 3px solid rgba(0, 167, 157, 0.4);
+  margin: 1%;
+  overflow: auto; }
+
+.raw_json {
+  float: right; }
+  .raw_json .ace_editor {
+    position: relative;
+    height: 90.8%;
+    font-size: 14px; }
+
+/*# sourceMappingURL=json_ui.css.map */
