@@ -9,7 +9,6 @@
      editor.init = init;
      editor.watch = watch;
      editor.parseJson = parseJson;
-     editor.getEditor = getEditor;
      editor.init();
 
      return editor;
@@ -22,19 +21,17 @@
      function watch() {
        var raw_json = parseJson(editor.getValue());
        if(raw_json) {
+         // update json_ui
        }
      }
 
-     function parseJson(){
+     function parseJson(raw){
        try {
-          return JSON.parse(raw_text);
+          return JSON.parse(raw);
        } catch (e) {
           return null;
        }
      }
 
-     function getEditor() {
-        return editor;   
-     }
    }
 })();
