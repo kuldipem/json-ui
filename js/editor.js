@@ -7,25 +7,16 @@
      var editor = ace.edit("editor");
       
      editor.init = init;
-     editor.watch = watch;
-     editor.parseJson = parseJson;
+     editor.getJson = getJson;
      editor.init();
 
      return editor;
 
      function init(){
         editor.getSession().setMode("ace/mode/json");
-        editor.getSession().on('change', watch);
      }            
 
-     function watch() {
-       var raw_json = parseJson(editor.getValue());
-       if(raw_json) {
-         // update json_ui
-       }
-     }
-
-     function parseJson(raw){
+     function getJson(raw){
        try {
           return JSON.parse(raw);
        } catch (e) {
