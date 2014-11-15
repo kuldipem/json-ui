@@ -28,3 +28,21 @@ hr{
         font-size: 14px;
     }
 }
+.ui{
+    padding: 20px;
+    height: 82%;
+    width: 50%;
+    .json-wrap {
+        border-left: 2px dashed #C7C7C7;
+        border-top: 2px solid #C7C7C7;
+        border-bottom: 2px solid #C7C7C7;
+        height: auto;
+    }
+    form{
+        padding: 10px;
+        overflow: visible;
+    }
+    input[type="text"] {
+        width: 25%;
+    }
+}
