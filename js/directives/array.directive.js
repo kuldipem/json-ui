@@ -4,20 +4,16 @@
 
   module.export = require('angular')
                   .module('json.ui')
-                  .directive('object', objectDirective);
+                  .directive('array', arrayDirective);
 
-  var jsonUIcontroller = require('../controllers/jsonUI.controller');
-
-  function objectDirective() {
+  function arrayDirective() {
     var directive = {
         require: '?ngModel',
         restrict: 'E',
         scope: {
           ngModel: '='
         },
-        templateUrl: 'views/object.html',
-        controller: jsonUIcontroller,
-        controllerAs: 'jsonUI'
+        templateUrl: 'views/array.html'
     };
     return directive;
   }
