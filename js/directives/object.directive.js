@@ -6,17 +6,19 @@
                   .module('json.ui')
                   .directive('object', objectDirective);
 
+  var formController = require('../controllers/form.controller');
+
   function objectDirective() {
     var directive = {
+        require: '?ngModel',
         restrict: 'E',
+        scope: {
+          ngModel: '='
+        },
         templateUrl: 'views/object.html',
-        controller: inputsController,
-        controllerAs: 'input'
+        controller: formController,
+        controllerAs: 'json'
     };
     return directive;
   }
-
-  function inputsController() {
-  }
-
 })();
