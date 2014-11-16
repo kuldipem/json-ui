@@ -1,10 +1,8 @@
-<button class="add" ng-click="addObject()">+</button>
-<input type="text" ng-model=""></input>
-  
-<select>
-	<option>-- choose type --</option>
-	<option value="value">value</option>
-	<option value="object">object</option>
-  <option value="array">array</option>
+<button class="add" ng-click="json.addObject($event)">+</button>
+<input type="text" ng-model="input"></input>
+<select ng-model="type" onchange="replace(this)">
+   <option value="">-- select type --</option>
+   <option value="value">value</option>
+   <option value="object">object</option>
+   <option value="array">array</option>
 </select>
-
