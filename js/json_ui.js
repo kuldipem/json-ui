@@ -1,23 +1,21 @@
 (function(){
-  'use strict';
+'use strict';
 
-  var jsonEditor = require("../js/editor")();
-  jsonEditor.getSession().on('change', watch);
-  
-  var angular = require('angular');
-  require('angular-route');
+var jsonEditor = require("../js/editor")();
+jsonEditor.getSession().on('change', watch);
 
-  angular.module('json.ui', ['ngRoute']);
+var angular = require('angular');
+require('angular-route');
 
-  var formController = require('../js/controllers/form.controller');
-  require("../js/directives/object.directive");
-  
-  function watch() {
-    var raw_json = jsonEditor.getJson();
-    if(raw_json) {
-       
-    }
+var app = angular.module('json.ui', ['ngRoute']);
+
+require("../js/services/object.services");
+require("../js/directives/object.directive");
+
+function watch() {
+  var raw_json = jsonEditor.getJson();
+  if(raw_json) {
+     
   }
-
-
-})();
+}
+)();
