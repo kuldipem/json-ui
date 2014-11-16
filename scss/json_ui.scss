@@ -31,18 +31,31 @@ hr{
 .ui{
     padding: 20px;
     height: 82%;
-    width: 50%;
+    width: auto;
     .json-wrap {
         border-left: 2px dashed #C7C7C7;
         border-top: 2px solid #C7C7C7;
         border-bottom: 2px solid #C7C7C7;
+        display: inline-table;
         height: auto;
+        padding: 3px;
     }
     form{
         padding: 10px;
         overflow: visible;
     }
     input[type="text"] {
-        width: 25%;
+        width: 80px;
     }
 }
+object.root, object.sibling{
+    display: block;
+}
+object.root{
+    width: 1000px;
+}
+object.child{
+
+}
+
+
