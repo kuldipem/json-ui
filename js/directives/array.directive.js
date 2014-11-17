@@ -6,6 +6,8 @@
                   .module('json.ui')
                   .directive('array', arrayDirective);
 
+  var jsonUIcontroller = require('../controllers/jsonUI.controller');
+
   function arrayDirective() {
     var directive = {
         require: '?ngModel',
@@ -13,7 +15,9 @@
         scope: {
           ngModel: '='
         },
-        templateUrl: 'views/array.html'
+        templateUrl: 'views/array.html',
+        controller: jsonUIcontroller,
+        controllerAs: 'jsonUI'
     };
     return directive;
   }
