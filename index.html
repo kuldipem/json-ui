@@ -4,18 +4,21 @@
     <title>Json-UI</title>
     <link rel="stylesheet" type="text/css" href="css/json_ui.css" />
   </head>
-  <body>
+  <body ng-controller="jsonUIController as jsonUI">
 
     <div class="json_ui">
       <h3>json-ui</h3><hr/>
       <div class="ui">
-        <div class="json-wrap">
-        <form>
-          <object class="root">
+        <form class="json-wrap">
+          <object class="root" id="main">
           </object>
         </form>
-        </div>
       </div>
+    </div>
+
+    <div class="button-area">
+      <button class="to-json-raw" ng-click="jsonUI.toRawJson()">-></button>
+      <button class="to-json-ui" ng-click=""><-</button>
     </div>
 
     <div class="raw_json">
