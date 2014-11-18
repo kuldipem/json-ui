@@ -67,6 +67,11 @@
       switch (propName) {
         case 'KEY':
           key = jqlite(children).val();
+          console.log(key);
+          if(key in currObj) {
+            alert('Error: key cannot be the same.');
+            return;
+          }
           currObj[key] = null;
           break;
         case 'VALUE':
