@@ -97,7 +97,7 @@
           thisObject.after(jsonKeyValue);
         }
         else {
-          appendElement(thisElement);
+          appendElement(thisObject);
         }
       }
       thisObject.remove();
