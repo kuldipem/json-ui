@@ -20,6 +20,7 @@
        try {
           return JSON.parse(raw);
        } catch (e) {
+          alert('Error: invaild json format');
           return null;
        }
      }
