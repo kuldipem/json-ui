@@ -1,10 +1,12 @@
-<button class="remove" ng-click="jsonUI.remove($event)">-</button>
-<button class="add" ng-click="jsonUI.addObject($event)">+</button>
-<input type="text" ng-model="input"></input>
-<span>--</span>
-<select ng-model="type" onchange="replace(this)">
-   <option value="">-- select type --</option>
-   <option value="value">value</option>
-   <option value="object">object</option>
-   <option value="array">array</option>
-</select>
+<key-value>
+  <button class="remove" ng-click="jsonUI.remove($event)">-</button>
+  <button class="add" ng-click="jsonUI.addObject($event)">+</button>
+  <key><input type="text"></input></key>
+  <span>--</span>
+  <select ng-model="type" onchange="replace(this)">
+     <option value="">-- select type --</option>
+     <option value="value">value</option>
+     <option value="object">object</option>
+     <option value="array">array</option>
+  </select>
+</key-value>
