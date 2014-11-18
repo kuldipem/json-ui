@@ -5,6 +5,9 @@
                    .service('convertService', convertService);
 
   function convertService() {
+    /* use string replace with regular expression to
+     * convert the raw json to ui DOM foramt
+     **/
 
     this.toDocument = toDocument;
 
