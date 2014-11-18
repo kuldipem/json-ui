@@ -15,7 +15,7 @@ hr{
     margin: 0px;
 }
 .json_ui, .raw_json {
-    width: 47%;
+    width: 45%;
     float: left;
     height: 100%;
     border: 3px solid $primary-color;
@@ -50,15 +50,17 @@ hr{
         width: 80px;
     }
 }
-object.root, object.sibling{
+object.root{
     display: block;
     padding: 5px;
-}
-object.root{
     width: 1000px;
 }
 object.child{
     padding: 5px;
+}
+key-value {
+    display: block;
+    padding: 2px;
 }
 .array-wrap {
     display: inline-block;
@@ -71,3 +73,19 @@ object.child{
 .ui form > object:first-child > button.remove{
     display: none;
 }
+
+.button-area{
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 251px;
+    button.to-json-raw{
+        display: block;
+        width: 50px;
+    }
+    button.to-json-ui{
+        display: block;
+        width: 50px;
+    }
+}
+
