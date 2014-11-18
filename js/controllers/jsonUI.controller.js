@@ -4,9 +4,10 @@
   module.exports = jsonUIcontroller;
   var jsonEditor = require("../editor")();
 
-  function jsonUIcontroller($scope, $element, $compile, 
-    objectService, valueService, arrayService, parserService) {
+  function jsonUIcontroller($scope, $element, $compile, objectService, 
+    valueService, arrayService, parserService, convertService) {
 
+    var uiScope = angular.element(document.querySelector('#main'));
     var jsonValue;
     var jsonObject;
     var jsonKeyValue;
@@ -17,6 +18,7 @@
     this.appendElement = appendElement;
     this.remove = remove;
     this.toRawJson = toRawJson;
+    this.toJsonUI = toJsonUI;
 
     getObject();
     getValue();
@@ -26,7 +28,7 @@
       objectService.getObject()
         .success(function (data) {
           jsonKeyValue = data;
-          jsonObject =  '<object class="child json-wrap">'
+          jsonObject =  '<object class="child">'
                               + data + '</object>';
         })
         .error(function (error) {
@@ -48,7 +50,7 @@
        arrayService.getArray()
         .success(function (data) {
           element = data;
-          jsonArray =  '<array class="array-wrap">' + data + '</array>';
+          jsonArray =  '<array>' + data + '</array>';
         })
         .error(function (error) {
           console.log(error);
@@ -59,7 +61,6 @@
 
       var selectType = sel.value;
       var thisDOM = angular.element(sel);
-      var scope = angular.element(sel).scope();
 
       if(selectType === 'value') {
         thisDOM.after(jsonValue);
@@ -105,11 +106,23 @@
     }
   
     function toRawJson() {
-      var uiScope = angular.element(document.querySelector('#main'));
       var rawJson = parserService.parseUI(uiScope);
       jsonEditor.setValue(rawJson);
     }
 
+    function toJsonUI() {
+      var rawJson = jsonEditor.getValue();
+      var json = jsonEditor.getJson(rawJson);
+
+      if(json) {
+        var jsonDOM = convertService.toDocument(rawJson, json);
+        uiScope.empty();
+        //$scope.count ++;
+        //var el = $compile(jsonDOM)( $scope );
+        console.log(jsonDOM);
+        uiScope.append(jsonDOM);
+      }
+    }
   }
 
 })();

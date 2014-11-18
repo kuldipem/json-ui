@@ -13,6 +13,7 @@ require("../js/services/object.service");
 require("../js/services/value.service");
 require("../js/services/array.service");
 require("../js/services/parser.service");
+require("../js/services/convert.service");
 require("../js/directives/object.directive");
 require("../js/directives/value.directive");
 require("../js/directives/array.directive");
