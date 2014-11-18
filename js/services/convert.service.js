@@ -12,8 +12,8 @@
 
       var keyPrefix = "<key><input type='text' value='" 
       var keySuffix = "'></input></key><span>--</span>";
-      var buttons =  "<button class='remove' ng-click='jsonUI.remove($event)'>-</button>"
-                   + "<button class='add' ng-click='jsonUI.addObject($event)'>+</button>" 
+      var buttons =  "<button class='remove' onclick='removeSelf(this)'>-</button>"
+                   + "<button class='add' onclick='addObject(this)'>+</button>" 
 
       var valuePrefix = "<value><input type='text' value='"
       var valueSuffix = "'></input></value>";
@@ -24,8 +24,8 @@
       rawJson = rawJson.replace(keyReg, '<key-value>' + buttons + 
                                 keyPrefix + '$1' + keySuffix );
 
-      rawJson = rawJson.replace(valueReg, valuePrefix + '$1' +
-                            valueSuffix);
+      rawJson = rawJson.replace(valueReg, buttons + valuePrefix +
+                                '$1' + valueSuffix);
 
       //rawJson = rawJson.replace(/[\[](.*),(.*)[\]]/g, '[$1' + ' ' + '$2]');
       //rawJson = rawJson.replace(/,/g , '</key-value>');

@@ -1,6 +1,6 @@
 <key-value>
-  <button class="remove" ng-click="jsonUI.remove($event)">-</button>
-  <button class="add" ng-click="jsonUI.addObject($event)">+</button>
+  <button class="remove" onclick="removeSelf(this)">-</button>
+  <button class="add" onclick="addObject(this)">+</button>
   <key><input type="text"></input></key>
   <span>--</span>
   <select ng-model="type" onchange="replace(this)">

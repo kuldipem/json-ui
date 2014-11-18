@@ -5,6 +5,6 @@
     <option value="object">object</option>
     <option value="array">array</option>
   </select>
-  <button class="remove" ng-click="jsonUI.remove($event)">-</button>
-  <button class="add" ng-click="jsonUI.appendElement($event)">+</button>
+  <button class="remove" onclick="removeSelf(this)">-</button>
+  <button class="add" onclick="appendElement(this)">+</button>
 </element>

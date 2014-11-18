@@ -14,11 +14,12 @@
     var jsonArray;
     var element;
 
-    this.addObject = addObject;
-    this.appendElement = appendElement;
-    this.remove = remove;
     this.toRawJson = toRawJson;
     this.toJsonUI = toJsonUI;
+    window.removeSelf = removeSelf;
+    window.replace = replace;
+    window.addObject = addObject;
+    window.appendElement = appendElement;
 
     getObject();
     getValue();
@@ -57,7 +58,7 @@
         });
     }
 
-    window.replace = function (sel) {
+    function replace(sel) {
 
       var selectType = sel.value;
       var thisDOM = angular.element(sel);
@@ -76,33 +77,30 @@
       thisDOM.remove();
     }
 
-    function addObject($event) {
-      var thisObject = angular.element($event.srcElement).parent();
-      var el = $compile(jsonKeyValue)( $scope );
-      thisObject.after(el);
+    function addObject(thisElement) {
+      var thisObject  = angular.element(thisElement).parent();
+      thisObject.after(jsonKeyValue);
     }
 
-    function appendElement($event) {
-      var thisElement = angular.element($event.srcElement).parent();
-      var el = $compile(element)( $scope );
-      thisElement.append(el);
+    function appendElement(thisElement) {
+      var thisObject = angular.element(thisElement).parent();
+      thisObject.append(element);
     }
 
-    function remove($event) {
-      var thisElement = angular.element($event.srcElement).parent();
-      var elementNumber = thisElement.parent().children().length;
+    function removeSelf(thisElement) {
+      var thisObject = angular.element(thisElement).parent();
+      var elementNumber = thisObject.parent().children().length;
 
       if(elementNumber === 1) {
-        var propName = thisElement.prop("tagName");
+        var propName = thisObject.prop("tagName");
         if(propName === 'KEY-VALUE') {
-          var el = $compile(jsonKeyValue)( $scope );
-          thisElement.after(el);
+          thisObject.after(jsonKeyValue);
         }
         else {
-          this.appendElement($event);
+          appendElement(thisElement);
         }
       }
-      thisElement.remove();
+      thisObject.remove();
     }
   
     function toRawJson() {
@@ -117,8 +115,6 @@
       if(json) {
         var jsonDOM = convertService.toDocument(rawJson, json);
         uiScope.empty();
-        //$scope.count ++;
-        //var el = $compile(jsonDOM)( $scope );
         console.log(jsonDOM);
         uiScope.append(jsonDOM);
       }
