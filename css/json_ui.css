@@ -1,31 +1,4 @@
-html, body {
-  font: 100% Helvetica, sans-serif;
-  height: 100%;
-  color: #C7C7C7; }
-
-h3 {
-  margin-left: 15px;
-  color: #00a79d; }
-
-hr {
-  border: 3px solid rgba(0, 167, 157, 0.4);
-  margin: 0px; }
-
-.json_ui, .raw_json {
-  width: 45%;
-  float: left;
-  height: 100%;
-  border: 3px solid rgba(0, 167, 157, 0.4);
-  margin: 1%;
-  overflow: auto; }
-
-.raw_json {
-  float: right; }
-  .raw_json .ace_editor {
-    position: relative;
-    height: 90.8%;
-    font-size: 14px; }
-
+/*This scss should put only json-ui styles*/
 .ui {
   padding: 20px;
   height: 82%;
@@ -59,17 +32,3 @@ array {
   display: inline-block;
   padding: 5px;
   border: 3px solid #C7C7C7; }
-
-.button-area {
-  display: block;
-  position: absolute;
-  left: 48%;
-  top: 251px; }
-  .button-area button.to-json-raw {
-    display: block;
-    width: 50px; }
-  .button-area button.to-json-ui {
-    display: block;
-    width: 50px; }
-
-/*# sourceMappingURL=json_ui.css.map */

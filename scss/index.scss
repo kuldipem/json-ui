@@ -1,0 +1,49 @@
+/* This scss should put only demo website usage */
+
+$primary-color: rgba(0,167,157,.4);
+$gray:  #C7C7C7;
+
+html, body{
+    font: 100% Helvetica, sans-serif;
+    height: 100%;
+    color: $gray;
+}
+h3{
+    margin-left: 15px;
+    color: rgb(0, 167, 157);
+}
+hr{
+    border: 3px solid $primary-color;
+    margin: 0px;
+}
+.json_ui, .raw_json {
+    width: 45%;
+    float: left;
+    height: 100%;
+    border: 3px solid $primary-color;
+    margin: 1%;
+    overflow: auto;
+}
+.raw_json{
+    float: right;
+    .ace_editor { 
+        position: relative;
+        height: 90.8%; 
+        font-size: 14px;
+    }
+}
+.button-area{
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 251px;
+    button.to-json-raw{
+        display: block;
+        width: 50px;
+    }
+    button.to-json-ui{
+        display: block;
+        width: 50px;
+    }
+}
+
