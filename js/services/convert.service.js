@@ -12,7 +12,7 @@
     this.toDocument = toDocument;
 
     function toDocument(rawJson, json) {
-
+    
       var keyPrefix = "<key><input type='text' value='" ;
       var keySuffix = "'></input></key><span>--</span>";
       var valuePrefix = "<value><input type='text' value='";
@@ -23,12 +23,13 @@
       var appendEleButton = '<button class="add" onclick="appendElement(this)">+</button>';
 
       var keyReg = /"([^,:{}\[\]]*)"\s*:/g;
-      var valueReg = /"([^,:{}\[\]]*)"/g;
+      var valueReg = /[^\\]"([^,{}\[\]]*)[^\\]"/g;
       var objPrefixReg = /{/g;
       var objSuffixReg = /}/g;
       var arrayPrefixReg = /\[/g;
       var arraySuffixReg = /\]/g;
       var comma = /,/g;
+      var double_quot = /[\\]"/g;
 
       rawJson = rawJson.replace(keyReg, '<key-value>' + removeButton + addObjButton 
                                 + keyPrefix + '$1' + keySuffix );
@@ -42,6 +43,7 @@
       rawJson = rawJson.replace(arrayPrefixReg, '<array><element>');
       rawJson = rawJson.replace(arraySuffixReg,  removeButton + appendEleButton + '</element></array>');
       rawJson = rawJson.replace(comma, '');
+      rawJson = rawJson.replace(double_quot, '"');
 
       return rawJson.substring(22, rawJson.length-10);;
     }
