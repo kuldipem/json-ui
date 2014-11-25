@@ -41,9 +41,13 @@ h3 {
 
 hr {
   border: 3px solid rgba(0, 167, 157, 0.4);
-  margin: 0px; }
+  margin: 0px;
+  width: 1000px; }
 
 .json_ui, .raw_json {
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
   width: 45%;
   float: left;
   height: 90%;
