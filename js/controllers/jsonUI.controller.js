@@ -7,7 +7,7 @@
   function jsonUIcontroller($scope, $element, $compile, objectService, 
     valueService, arrayService, parserService, convertService) {
 
-    var uiScope = angular.element(document.querySelector('#main'));
+    var uiScope = angular.element(document.querySelector('#ui-main'));
     var jsonValue;
     var jsonObject;
     var jsonKeyValue;
@@ -84,7 +84,7 @@
 
     function appendElement(thisElement) {
       var thisObject = angular.element(thisElement).parent();
-      thisObject.append(element);
+      thisObject.after(element);
     }
 
     function removeSelf(thisElement) {
@@ -97,7 +97,7 @@
           thisObject.after(jsonKeyValue);
         }
         else {
-          appendElement(thisObject);
+          thisObject.after(element);
         }
       }
       thisObject.remove();
