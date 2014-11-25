@@ -7,7 +7,7 @@
     padding: 10px;
     overflow: visible; }
   .ui input[type="text"] {
-    width: 80px; }
+    width: 60px; }
 
 object {
   border-left: 2px dashed #C7C7C7;
@@ -18,8 +18,7 @@ object {
 
 object.root {
   display: block;
-  padding: 5px;
-  width: 1000px; }
+  padding: 5px; }
 
 object.child {
   padding: 5px; }
@@ -32,3 +31,5 @@ array {
   display: inline-block;
   padding: 5px;
   border: 3px solid #C7C7C7; }
+
+/*# sourceMappingURL=json_ui.css.map */

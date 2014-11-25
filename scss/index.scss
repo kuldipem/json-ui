@@ -4,7 +4,7 @@ $primary-color: rgba(0,167,157,.4);
 $gray:  #C7C7C7;
 
 html, body{
-    font: 100% Helvetica, sans-serif;
+    font-family: 'Noto Sans', Helvetica, 'sans-serif', 'Microsoft Jhenghei';
     height: 100%;
     color: $gray;
 }
@@ -19,7 +19,7 @@ hr{
 .json_ui, .raw_json {
     width: 45%;
     float: left;
-    height: 100%;
+    height: 90%;
     border: 3px solid $primary-color;
     margin: 1%;
     overflow: auto;
@@ -28,7 +28,7 @@ hr{
     float: right;
     .ace_editor { 
         position: relative;
-        height: 90.8%; 
+        height: 89.5%; 
         font-size: 14px;
     }
 }
@@ -37,13 +37,32 @@ hr{
     position: absolute;
     left: 48%;
     top: 251px;
-    button.to-json-raw{
+    button {
+        background-color: #00c4bc;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        min-height: 1em;
+        outline: none;
+        border: none;
+        border-radius: 0.2857rem;
+        text-align: center;
+        font-size: 1rem;
+        box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
         display: block;
         width: 50px;
+        margin: 10px 0px 0px 0px;
+        transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+
+        &:hover {
+            background-color: $primary-color;
+            color: #ffffff;
+            text-shadow: none;
+        }
+    }
+    button.to-json-raw{
     }
     button.to-json-ui{
-        display: block;
-        width: 50px;
     }
 }
 

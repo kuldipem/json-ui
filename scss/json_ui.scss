@@ -12,7 +12,7 @@ $gray:  #C7C7C7;
         overflow: visible;
     }
     input[type="text"] {
-        width: 80px;
+        width: 60px;
     }
 }
 object{
@@ -26,7 +26,6 @@ object{
 object.root{
     display: block;
     padding: 5px;
-    width: 1000px;
 }
 object.child{
     padding: 5px;
