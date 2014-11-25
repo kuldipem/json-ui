@@ -14,6 +14,7 @@
 
      function init(){
         editor.getSession().setMode("ace/mode/json");
+        editor.setValue(JSON.stringify({ "key" : "value" }, null, 4));
      }            
 
      function getJson(raw){
