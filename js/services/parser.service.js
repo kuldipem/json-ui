@@ -11,10 +11,12 @@
     var prevKey = null;
     var acceptTag = ['OBJECT', 'VALUE', 'ARRAY', 
                     'KEY', 'KEY-VALUE', 'ELEMENT'];
+    var valid = true;
 
     function parseUI(uiScope) {
       var jsonElement = {}
       var tag = {};
+      valid = true;
 
       tag.isArray = false;
       traverse(uiScope, jsonElement, tag);
@@ -32,6 +34,10 @@
         if(acceptTag.indexOf(tagName) >= 0) {
 
           addElement(jsonElement, child, tag);
+
+          if (!valid) { 
+            return;
+          }
           traverseWithTag(tagName, child, jsonElement, tag);
         }
       }
@@ -69,7 +75,7 @@
           key = jqlite(children).val();
           if(key in currObj) {
             alert('Error: key cannot be the same.');
-            return;
+            valid = false;
           }
           currObj[key] = null;
           break;
