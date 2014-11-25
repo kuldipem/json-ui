@@ -23,7 +23,7 @@
       var appendEleButton = '<button class="add" onclick="appendElement(this)">+</button>';
 
       var keyReg = /"([^,:{}\[\]]*)"\s*:/g;
-      var valueReg = /[^\\]"([^,{}\[\]]*)[^\\]*"/g;
+      var valueReg = /[^\\]"([^,{}\[\]]*)([^\\])"/g;
       var objPrefixReg = /{/g;
       var objSuffixReg = /}/g;
       var arrayPrefixReg = /\[/g;
@@ -36,7 +36,7 @@
                                 + keyPrefix + '$1' + keySuffix );
 
       rawJson = rawJson.replace(valueReg, valuePrefix 
-                                +'$1' + valueSuffix);
+                                +'$1' + '$2' + valueSuffix);
 
       rawJson = rawJson.replace(keyValueReg, '</key-value><key-value>');
       rawJson = rawJson.replace(objPrefixReg, "<object class='child'>");
