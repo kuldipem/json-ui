@@ -47,9 +47,14 @@
 
       switch (tagName) {
         case 'ARRAY':
-          tag.isArray = true;
-          traverse(child, jsonElement[key], angular.copy(tag));
-          tag.isArray = false;
+          if(tag.isArray) {
+            traverse(child, jsonElement[jsonElement.length-1], angular.copy(tag));
+          }
+          else{
+            tag.isArray = true;
+            traverse(child, jsonElement[key], angular.copy(tag));
+            tag.isArray = false;
+          }
           break;
         case 'OBJECT':
           if(tag.isArray) {
@@ -97,7 +102,12 @@
           }
           break;
         case 'ARRAY':
-          currObj[key] = [];
+          if(tag.isArray) {
+            currObj.push([]);
+          }
+          else {
+            currObj[key] = [];
+          }
       }
     }
 
