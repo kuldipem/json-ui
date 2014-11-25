@@ -4,11 +4,12 @@
     <title>Json-UI</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <link rel="stylesheet" type="text/css" href="./css/json_ui.css" />
+    <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body ng-controller="jsonUIController as jsonUI">
 
     <div class="json_ui">
-      <h3>json-ui</h3><hr/>
+      <h3>JsonUI</h3><hr/>
       <div class="ui">
         <form>
           <object class="root" id="main">
@@ -18,12 +19,12 @@
     </div>
 
     <div class="button-area">
-      <button class="to-json-raw" ng-click="jsonUI.toRawJson()">-></button>
-      <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><-</button>
+      <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
+      <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
     </div>
 
     <div class="raw_json">
-      <h3>raw-json</h3><hr/>
+      <h3>RawJson</h3><hr/>
       <div id="editor"></div> 
     </div>
 
