@@ -23,13 +23,14 @@
       var appendEleButton = '<button class="add" onclick="appendElement(this)">+</button>';
 
       var keyReg = /"([^,:{}\[\]]*)"\s*:/g;
-      var valueReg = /[^\\]"([^,{}\[\]]*)[^\\]"/g;
+      var valueReg = /[^\\]"([^,{}\[\]]*)[^\\]*"/g;
       var objPrefixReg = /{/g;
       var objSuffixReg = /}/g;
       var arrayPrefixReg = /\[/g;
       var arraySuffixReg = /\]/g;
+      var keyValueReg = /,\s*<key-value>/g
       var comma = /,/g;
-      var double_quot = /[\\]"/g;
+      var doubleQuot = /[\\]"/g;
 
       rawJson = rawJson.replace(keyReg, '<key-value>' + removeButton + addObjButton 
                                 + keyPrefix + '$1' + keySuffix );
@@ -37,13 +38,13 @@
       rawJson = rawJson.replace(valueReg, valuePrefix 
                                 +'$1' + valueSuffix);
 
-      rawJson = rawJson.replace(/,\s*<key-value>/g, '</key-value><key-value>');
+      rawJson = rawJson.replace(keyValueReg, '</key-value><key-value>');
       rawJson = rawJson.replace(objPrefixReg, "<object class='child'>");
       rawJson = rawJson.replace(objSuffixReg, '</object>');
       rawJson = rawJson.replace(arrayPrefixReg, '<array><element>');
       rawJson = rawJson.replace(arraySuffixReg,  removeButton + appendEleButton + '</element></array>');
       rawJson = rawJson.replace(comma, '');
-      rawJson = rawJson.replace(double_quot, '"');
+      rawJson = rawJson.replace(doubleQuot, '"');
 
       return rawJson.substring(22, rawJson.length-10);;
     }

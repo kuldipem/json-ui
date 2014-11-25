@@ -115,7 +115,6 @@
       if(json) {
         var jsonDOM = convertService.toDocument(rawJson, json);
         uiScope.empty();
-        console.log(jsonDOM);
         uiScope.append(jsonDOM);
       }
     }
