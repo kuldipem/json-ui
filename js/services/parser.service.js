@@ -19,7 +19,7 @@
       tag.isArray = false;
       traverse(uiScope, jsonElement, tag);
 
-      return JSON.stringify(jsonElement);
+      return JSON.stringify(jsonElement, null, 4);
     }
 
     function traverse(node, jsonElement, tag) {
@@ -67,7 +67,6 @@
       switch (propName) {
         case 'KEY':
           key = jqlite(children).val();
-          console.log(key);
           if(key in currObj) {
             alert('Error: key cannot be the same.');
             return;
