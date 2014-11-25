@@ -8,6 +8,44 @@ html, body{
     height: 100%;
     color: $gray;
 }
+#header {
+    margin-top: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-family: "Lato-Light";
+    background-color: #fff;
+    #navigation .wrapper {
+        padding: 20px 65px;
+        margin: 0 auto;
+
+         ul {
+            position: absolute;
+            right: 4em;
+            top: 1.3em;
+            vertical-align: middle;
+            font-size: 1.5em;
+            display: inline;
+        }
+        li {
+            list-style-type: none;
+        }
+        li a {
+            color: #f80041;
+            display: inline-block;
+            &:hover {
+                border-bottom: #f80041 3px solid;
+                text-decoration: none;
+            }
+        }
+    }
+    .logo img {
+        width: 150px;
+    }
+}
+.main {
+    height: 500px;
+    margin-top: 30px;
+}
 h3{
     margin-left: 15px;
     color: rgb(0, 167, 157);
@@ -60,9 +98,10 @@ hr{
             text-shadow: none;
         }
     }
-    button.to-json-raw{
-    }
-    button.to-json-ui{
-    }
 }
-
+.root {
+    width: 100%;
+}
+.ui form {
+    width: 800px;
+}

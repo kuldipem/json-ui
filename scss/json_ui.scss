@@ -4,7 +4,6 @@ $primary-color: rgba(0,167,157,.4);
 $gray:  #C7C7C7;
 
 .ui{
-    padding: 20px;
     height: 82%;
     width: auto;
     form{
@@ -13,29 +12,58 @@ $gray:  #C7C7C7;
     }
     input[type="text"] {
         width: 60px;
+        color: #ccc;
     }
-}
-object{
-     border-left: 2px dashed $gray;
-     border-top: 2px solid $gray;
-     border-bottom: 2px solid $gray;
-     display: inline-table;
-     height: auto;
-}
+    select {
+        -webkit-box-shadow: rgba(0,0,0,0.1) 0 0 0 1px;
+        box-shadow: rgba(0,0,0,0.1) 0 0 0 1px;
+        -o-border-radius: 0.1875rem;
+        border-radius: 0.1875rem;
+        background-color: white;
+        border-color: rgba(39,41,43,.15);
+        box-shadow: 0 0 4px 0 rgba(0,0,0,.08);
+    }
+    option {
+        background-color: white;
+    }
+    object{
+         border-left: 2px dashed $gray;
+         border-top: 2px solid $gray;
+         border-bottom: 2px solid $gray;
+         display: inline-table;
+         height: auto;
+    }
 
-object.root{
-    display: block;
-    padding: 5px;
-}
-object.child{
-    padding: 5px;
-}
-key-value {
-    display: block;
-    padding: 2px;
-}
-array{
-    display: inline-block;
-    padding: 5px;
-    border: 3px solid $gray;
+    object.root{
+        display: block;
+        padding: 5px;
+    }
+    object.child{
+        padding: 5px;
+    }
+    key-value {
+        display: block;
+        padding: 2px;
+    }
+    array{
+        display: inline-block;
+        padding: 5px;
+        border: 3px solid $gray;
+    }
+    button {
+        background-color: #00c4bc;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        min-height: 1em;
+        outline: none;
+        border: none;
+        border-radius: 0.2857rem;
+        text-align: center;
+        font-size: 1rem;
+        box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+        width: 25px;
+        margin: 10px 2px 0px 0px;
+        transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    }
 }

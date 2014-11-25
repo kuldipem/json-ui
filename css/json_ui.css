@@ -1,35 +1,53 @@
 /*This scss should put only json-ui styles*/
 .ui {
-  padding: 20px;
   height: 82%;
   width: auto; }
   .ui form {
     padding: 10px;
     overflow: visible; }
   .ui input[type="text"] {
-    width: 60px; }
-
-object {
-  border-left: 2px dashed #C7C7C7;
-  border-top: 2px solid #C7C7C7;
-  border-bottom: 2px solid #C7C7C7;
-  display: inline-table;
-  height: auto; }
-
-object.root {
-  display: block;
-  padding: 5px; }
-
-object.child {
-  padding: 5px; }
-
-key-value {
-  display: block;
-  padding: 2px; }
-
-array {
-  display: inline-block;
-  padding: 5px;
-  border: 3px solid #C7C7C7; }
-
-/*# sourceMappingURL=json_ui.css.map */
+    width: 60px;
+    color: #ccc; }
+  .ui select {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px;
+    -o-border-radius: 0.1875rem;
+    border-radius: 0.1875rem;
+    background-color: white;
+    border-color: rgba(39, 41, 43, 0.15);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08); }
+  .ui option {
+    background-color: white; }
+  .ui object {
+    border-left: 2px dashed #C7C7C7;
+    border-top: 2px solid #C7C7C7;
+    border-bottom: 2px solid #C7C7C7;
+    display: inline-table;
+    height: auto; }
+  .ui object.root {
+    display: block;
+    padding: 5px; }
+  .ui object.child {
+    padding: 5px; }
+  .ui key-value {
+    display: block;
+    padding: 2px; }
+  .ui array {
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid #C7C7C7; }
+  .ui button {
+    background-color: #00c4bc;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: none;
+    border: none;
+    border-radius: 0.2857rem;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+    width: 25px;
+    margin: 10px 2px 0px 0px;
+    transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease; }
