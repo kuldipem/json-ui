@@ -1,6 +1,6 @@
 /* This scss should put only demo website usage */
 
-$primary-color: rgba(0,167,157,.4);
+$primary-color: #064EC5; //rgba(0,167,157,.4);
 $gray:  #C7C7C7;
 
 html, body{
@@ -8,40 +8,30 @@ html, body{
     height: 100%;
     color: $gray;
 }
-#header {
-    margin-top: 0;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    font-weight: bold;
-    font-family: "Lato-Light";
-    background-color: #fff;
-    #navigation .wrapper {
-        padding: 20px 65px;
-        margin: 0 auto;
 
-         ul {
-            position: absolute;
-            right: 4em;
-            top: 1.3em;
-            vertical-align: middle;
-            font-size: 1.5em;
-            display: inline;
-        }
-        li {
-            list-style-type: none;
-        }
-        li a {
-            color: #f80041;
-            display: inline-block;
-            &:hover {
-                border-bottom: #f80041 3px solid;
-                text-decoration: none;
+header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray;
+}
+
+    .header-content {
+        text-align: center;
+    }
+
+        .logo {
+            img {
+                width: 50px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            .site-name {
+                font-size: 2em;
+                display: inline-block;
+                color: $primary-color;
             }
         }
-    }
-    .logo img {
-        width: 150px;
-    }
-}
+
 .main {
     height: 500px;
     margin-top: 30px;
@@ -68,9 +58,9 @@ hr{
 }
 .raw_json{
     float: right;
-    .ace_editor { 
+    .ace_editor {
         position: relative;
-        height: 89.5%; 
+        height: 89.5%;
         font-size: 14px;
     }
 }

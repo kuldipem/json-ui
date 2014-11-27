@@ -4,32 +4,22 @@ html, body {
   height: 100%;
   color: #C7C7C7; }
 
-#header {
-  margin-top: 0;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  font-weight: bold;
-  font-family: "Lato-Light";
-  background-color: #fff; }
-  #header #navigation .wrapper {
-    padding: 20px 65px;
-    margin: 0 auto; }
-    #header #navigation .wrapper ul {
-      position: absolute;
-      right: 4em;
-      top: 1.3em;
-      vertical-align: middle;
-      font-size: 1.5em;
-      display: inline; }
-    #header #navigation .wrapper li {
-      list-style-type: none; }
-    #header #navigation .wrapper li a {
-      color: #f80041;
-      display: inline-block; }
-      #header #navigation .wrapper li a:hover {
-        border-bottom: #f80041 3px solid;
-        text-decoration: none; }
-  #header .logo img {
-    width: 150px; }
+header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C7C7C7; }
+
+.header-content {
+  text-align: center; }
+
+.logo img {
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px; }
+.logo .site-name {
+  font-size: 2em;
+  display: inline-block;
+  color: #064EC5; }
 
 .main {
   height: 500px;
@@ -40,7 +30,7 @@ h3 {
   color: #00a79d; }
 
 hr {
-  border: 3px solid rgba(0, 167, 157, 0.4);
+  border: 3px solid #064EC5;
   margin: 0px;
   width: 1000px; }
 
@@ -51,7 +41,7 @@ hr {
   width: 45%;
   float: left;
   height: 90%;
-  border: 3px solid rgba(0, 167, 157, 0.4);
+  border: 3px solid #064EC5;
   margin: 1%;
   overflow: auto; }
 
@@ -84,7 +74,7 @@ hr {
     margin: 10px 0px 0px 0px;
     transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease; }
     .button-area button:hover {
-      background-color: rgba(0, 167, 157, 0.4);
+      background-color: #064EC5;
       color: #ffffff;
       text-shadow: none; }
 
