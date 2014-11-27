@@ -4,14 +4,14 @@ $primary-color: #064EC5; //rgba(0,167,157,.4);
 $gray:  #C7C7C7;
 
 html, body{
-    font-family: 'Noto Sans', Helvetica, 'sans-serif', 'Microsoft Jhenghei';
+    font-family: 'sans-serif', 'Microsoft Jhenghei';
     height: 100%;
     color: $gray;
 }
-
+$header-gap: 30px;
 header {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: $header-gap;
+    // padding-bottom: $header-gap;
     border-bottom: 1px solid $gray;
 }
 
@@ -20,6 +20,8 @@ header {
     }
 
         .logo {
+            padding-bottom: $header-gap;
+            border-bottom: 1px solid $gray;
             img {
                 width: 50px;
                 display: inline-block;
@@ -29,6 +31,23 @@ header {
                 font-size: 2em;
                 display: inline-block;
                 color: $primary-color;
+            }
+        }
+
+        .intro {
+            background-color: #e7e7e7;
+            padding: 10px 0;
+            font-size: 1.5em;
+            a {
+                color: #777;
+            }
+            ul {
+                margin: 0;
+                li{
+                    display: inline-block;
+                    list-style-type: none;
+                    padding: 0 10px;
+                }
             }
         }
 

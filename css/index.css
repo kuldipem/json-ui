@@ -1,25 +1,40 @@
 /* This scss should put only demo website usage */
 html, body {
-  font-family: 'Noto Sans', Helvetica, 'sans-serif', 'Microsoft Jhenghei';
+  font-family: 'sans-serif', 'Microsoft Jhenghei';
   height: 100%;
   color: #C7C7C7; }
 
 header {
   padding-top: 30px;
-  padding-bottom: 30px;
   border-bottom: 1px solid #C7C7C7; }
 
 .header-content {
   text-align: center; }
 
-.logo img {
-  width: 50px;
-  display: inline-block;
-  margin-right: 10px; }
-.logo .site-name {
-  font-size: 2em;
-  display: inline-block;
-  color: #064EC5; }
+.logo {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C7C7C7; }
+  .logo img {
+    width: 50px;
+    display: inline-block;
+    margin-right: 10px; }
+  .logo .site-name {
+    font-size: 2em;
+    display: inline-block;
+    color: #064EC5; }
+
+.intro {
+  background-color: #e7e7e7;
+  padding: 10px 0;
+  font-size: 1.5em; }
+  .intro a {
+    color: #777; }
+  .intro ul {
+    margin: 0; }
+    .intro ul li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 0 10px; }
 
 .main {
   height: 500px;
