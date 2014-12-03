@@ -8,7 +8,7 @@ Json in editing in friendly UIs.
 
 ## Usage
 
-get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views from app/views
+get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views from `app/views`
 
 ### Including files: 
 
@@ -52,17 +52,13 @@ start server (you should install `npm install http-server -g` first)
 
 open the browser and type this [http://localhost:8000/app/](http://localhost:8000/app/)
 
-## compile scss file
+## compile scss file & js file
+
+We are using browserify so you should install browserify in global first ( npm install -g browserify ).
 
     $ npm install
     $ gulp
 
-## compile js files
-
-We are using browserify so you should install browserify in global first (`npm install -g browserify`).
-
-    $ browserify app/js/json_ui.js -d -o app/dist/json_ui.js
-
 ## deploy
 
-    $ git subtree push --prefix app origin gh-pages
+    $ ./deploy
