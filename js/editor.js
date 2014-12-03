@@ -8,16 +8,11 @@
       
      editor.init = init;
      editor.getJson = getJson;
-     editor.init();
+     window.editor = editor;
 
      return editor;
 
-     function init(){
-        var initJson =  {
-                          "Name": "Robert",
-                          "Family": ["Dad", "Mom", "Sister", "ME"],
-                          "Home": {"Country": "Taiwan", "City": "Tainan"}
-                        };
+     function init(initJson){
         editor.getSession().setMode("ace/mode/json");
         editor.setValue(JSON.stringify(initJson, null, 4));
      }            

@@ -24,7 +24,12 @@
     getObject();
     getValue();
     getArray();
+    init();
 
+    function init(config) {
+      toJsonUI(); 
+    }
+    
     function getObject() {
       objectService.getObject()
         .success(function (data) {
