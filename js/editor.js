@@ -13,8 +13,13 @@
      return editor;
 
      function init(){
+        var initJson =  {
+                          "Name": "Robert",
+                          "Family": ["Dad", "Mom", "Sister", "ME"],
+                          "Home": {"Country": "Taiwan", "City": "Tainan"}
+                        };
         editor.getSession().setMode("ace/mode/json");
-        editor.setValue(JSON.stringify({ "key" : "value" }, null, 4));
+        editor.setValue(JSON.stringify(initJson, null, 4));
      }            
 
      function getJson(raw){
