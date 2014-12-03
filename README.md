@@ -20,6 +20,8 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
 
 ### HTML structure
 
+**Set json-ui in page**
+
 ```html
 <html ng-app="json.ui">
 
@@ -29,17 +31,23 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
         </object>
       </form>
 </div>
+```
+**Set raw json editor in page**
 
-<div class="button-area" ng-controller="jsonUIController as jsonUI">
-        <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
-        <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
-</div>
-
+```html
 <div class="raw_json">
     <div id="editor"></div>
 </div>
 ```
 
+**Set json-ui <-> raw-json buttons in page**
+
+```html
+<div class="button-area" ng-controller="jsonUIController as jsonUI">
+        <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
+        <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
+</div>
+```
 ## Develop
 
 First run the following command (installing bower `npm install -g bower`)
