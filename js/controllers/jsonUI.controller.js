@@ -7,7 +7,7 @@
   function jsonUIcontroller($scope, $element, $compile, objectService, 
     valueService, arrayService, parserService, convertService) {
 
-    var uiScope = angular.element(document.querySelector('#ui-main'));
+    var uiScope = angular.element(document.querySelector('#json-wrap'));
     var jsonValue;
     var jsonObject;
     var jsonKeyValue;
