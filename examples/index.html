@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="json.ui">
+  <head>
+    <title>Json-UI</title>
+    <link rel="stylesheet" type="text/css" href="./css/json_ui.css" />
+  </head>
+  <body>
+
+    <div class="json-ui">
+        <form>
+          <object class="root" id="ui-main">
+          </object>
+        </form>
+    </div>
+
+    <div class="button-area" ng-controller="jsonUIController as jsonUI">
+        <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
+        <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
+    </div>
+
+    <div class="raw_json">
+        <div id="editor"></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/json_ui.js"></script>
+  </body>
+</html>

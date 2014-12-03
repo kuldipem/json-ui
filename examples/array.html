@@ -1,0 +1,10 @@
+<element>
+  <select ng-model="type" onchange="replace(this)">
+    <option value="" class="default">-- select type --</option>
+    <option value="value">value</option>
+    <option value="object">object</option>
+    <option value="array">array</option>
+  </select>
+  <button class="remove" onclick="removeSelf(this)">-</button>
+  <button class="add" onclick="appendElement(this)">+</button>
+</element>
