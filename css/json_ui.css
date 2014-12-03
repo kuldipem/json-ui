@@ -1,11 +1,11 @@
 /*This scss should put only json-ui styles*/
-.ui {
+.json-ui {
   height: 82%;
   width: auto; }
-  .ui form {
+  .json-ui form {
     padding: 10px;
     overflow: visible; }
-  .ui input[type="text"] {
+  .json-ui input[type="text"] {
     width: 75px;
     color: rgba(0, 0, 0, 0.8);
     margin: 0em;
@@ -19,13 +19,13 @@
     border-radius: 0.2857rem;
     box-shadow: 0em 0em 0em 0em transparent inset;
     transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
-    .ui input[type="text"]:focus {
+    .json-ui input[type="text"]:focus {
       color: rgba(0, 0, 0, 0.85);
       border-color: rgba(39, 41, 43, 0.3);
       border-radius: 0em 0.2857rem 0.2857rem 0em;
       background: #ffffff;
       box-shadow: 1px 0em 0em 0em rgba(39, 41, 43, 0.3) inset; }
-  .ui select {
+  .json-ui select {
     cursor: pointer;
     word-wrap: break-word;
     white-space: normal;
@@ -40,14 +40,14 @@
     border: 1px solid rgba(39, 41, 43, 0.15);
     border-radius: 0.2857rem;
     transition: border-radius 0.1s ease, width 0.2s ease, box-shadow 0.2s ease, border 0.2s ease; }
-    .ui select:focus {
+    .json-ui select:focus {
       border-color: #66afe9;
       outline: 0;
       -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
-  .ui option {
+  .json-ui option {
     background-color: white; }
-  .ui object {
+  .json-ui object {
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
@@ -56,22 +56,22 @@
     border-bottom: 2px solid #DDD;
     display: inline-table;
     height: auto; }
-  .ui object.root {
+  .json-ui object.root {
     display: block;
     padding: 5px; }
-  .ui object.child {
+  .json-ui object.child {
     padding: 5px; }
-  .ui key-value {
+  .json-ui key-value {
     display: block;
     padding: 2px; }
-  .ui array {
+  .json-ui array {
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
     display: inline-block;
     padding: 5px;
     border: 2px solid #DDD; }
-  .ui button {
+  .json-ui button {
     background-color: #00c4bc;
     color: #ffffff;
     cursor: pointer;
@@ -86,7 +86,7 @@
     width: 25px;
     margin: 10px 2px 0px 0px;
     transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease; }
-    .ui button:hover {
+    .json-ui button:hover {
       background-color: rgba(0, 167, 157, 0.4);
       color: #ffffff;
       text-shadow: none; }
