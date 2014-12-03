@@ -1,0 +1,100 @@
+/* This scss should put only demo website usage */
+html, body {
+  font-family: 'sans-serif', 'Microsoft Jhenghei';
+  height: 100%;
+  color: #C7C7C7; }
+
+header {
+  padding-top: 30px;
+  border-bottom: 1px solid #C7C7C7; }
+
+.header-content {
+  text-align: center; }
+
+.logo {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C7C7C7; }
+  .logo img {
+    width: 50px;
+    display: inline-block;
+    margin-right: 10px; }
+  .logo .site-name {
+    font-size: 2em;
+    display: inline-block;
+    color: #064EC5; }
+
+.intro {
+  background-color: #e7e7e7;
+  padding: 10px 0;
+  font-size: 1.5em; }
+  .intro a {
+    color: #777; }
+  .intro ul {
+    margin: 0; }
+    .intro ul li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 0 10px; }
+
+.main {
+  height: 500px;
+  margin-top: 30px; }
+
+h3 {
+  margin-left: 15px;
+  color: #00a79d; }
+
+hr {
+  border: 3px solid #064EC5;
+  margin: 0px;
+  width: 1000px; }
+
+.ui, .raw_json {
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  width: 45%;
+  float: left;
+  height: 90%;
+  border: 3px solid #064EC5;
+  margin: 1%;
+  overflow: auto; }
+
+.raw_json {
+  float: right; }
+  .raw_json .ace_editor {
+    position: relative;
+    height: 89.5%;
+    font-size: 14px; }
+
+.button-area {
+  display: block;
+  position: absolute;
+  left: 48%;
+  top: 251px; }
+  .button-area button {
+    background-color: #00c4bc;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: none;
+    border: none;
+    border-radius: 0.2857rem;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+    display: block;
+    width: 50px;
+    margin: 10px 0px 0px 0px;
+    transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease; }
+    .button-area button:hover {
+      background-color: #064EC5;
+      color: #ffffff;
+      text-shadow: none; }
+
+.root {
+  width: 100%; }
+
+.ui form {
+  width: 800px; }

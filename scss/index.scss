@@ -1,0 +1,120 @@
+/* This scss should put only demo website usage */
+
+$primary-color: #064EC5; //rgba(0,167,157,.4);
+$gray:  #C7C7C7;
+
+html, body{
+    font-family: 'sans-serif', 'Microsoft Jhenghei';
+    height: 100%;
+    color: $gray;
+}
+$header-gap: 30px;
+header {
+    padding-top: $header-gap;
+    // padding-bottom: $header-gap;
+    border-bottom: 1px solid $gray;
+}
+
+    .header-content {
+        text-align: center;
+    }
+
+        .logo {
+            padding-bottom: $header-gap;
+            border-bottom: 1px solid $gray;
+            img {
+                width: 50px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            .site-name {
+                font-size: 2em;
+                display: inline-block;
+                color: $primary-color;
+            }
+        }
+
+        .intro {
+            background-color: #e7e7e7;
+            padding: 10px 0;
+            font-size: 1.5em;
+            a {
+                color: #777;
+            }
+            ul {
+                margin: 0;
+                li{
+                    display: inline-block;
+                    list-style-type: none;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+.main {
+    height: 500px;
+    margin-top: 30px;
+}
+h3{
+    margin-left: 15px;
+    color: rgb(0, 167, 157);
+}
+hr{
+    border: 3px solid $primary-color;
+    margin: 0px;
+    width: 1000px;
+}
+.ui, .raw_json {
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+    width: 45%;
+    float: left;
+    height: 90%;
+    border: 3px solid $primary-color;
+    margin: 1%;
+    overflow: auto;
+}
+.raw_json{
+    float: right;
+    .ace_editor {
+        position: relative;
+        height: 89.5%;
+        font-size: 14px;
+    }
+}
+.button-area{
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 251px;
+    button {
+        background-color: #00c4bc;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        min-height: 1em;
+        outline: none;
+        border: none;
+        border-radius: 0.2857rem;
+        text-align: center;
+        font-size: 1rem;
+        box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+        display: block;
+        width: 50px;
+        margin: 10px 0px 0px 0px;
+        transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+
+        &:hover {
+            background-color: $primary-color;
+            color: #ffffff;
+            text-shadow: none;
+        }
+    }
+}
+.root {
+    width: 100%;
+}
+.ui form {
+    width: 800px;
+}

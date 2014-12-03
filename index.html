@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="json.ui">
+  <head>
+    <title>Json-UI</title>
+    <meta property="og:title" content="canner - Json-UI">
+    <meta property="og:site_name" content="canner - Json-UI">
+    <meta property="og:url" content="http://canner.github.io/json-ui/">
+    <meta property="og:description" content="A beautiful UI, editing JSON for EVERYONE!">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/json_ui.css" />
+    <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+   <!-- <header id="header">
+        <nav id="navigation" role="navigation">
+          <div class="wrapper"><a href="./" class="logo"><img src="./images/header-logo-xs.png"></a>
+            <ul>
+              <li><a href="https://github.com/Canner/json-ui" target="_blank">Github</a></li>
+            </ul>
+          </div>
+        </nav>
+   </header> -->
+   <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="https://dl.dropboxusercontent.com/u/28663689/canner.png" alt="canner-logo">
+        <div class="site-name">JsonUI to JSON</div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li><a href="https://github.com/Canner/json-ui">How to use?</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/JSON">Json format</a></li>
+        </ul>
+      </div>
+    </div>
+
+   </header>
+
+   <div class="main">
+      <div class="ui">
+        <h3>JsonUI</h3><hr/>
+        <div class="json-ui">
+          <form>
+            <object class="root" id="json-wrap">
+            </object>
+          </form>
+        </div>
+      </div>
+
+      <div class="button-area" ng-controller="jsonUIController as jsonUI">
+        <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
+        <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
+      </div>
+
+      <div class="raw_json">
+        <h3>RawJson</h3><hr/>
+        <div id="editor"></div>
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="./dist/json_ui.js"></script>
+    <script type="text/javascript" src="./dist/index.js"></script>
+  </body>
+</html>
