@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./css/json_ui.css" />
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body ng-controller="jsonUIController as jsonUI">
 
    <!-- <header id="header">
         <nav id="navigation" role="navigation">
@@ -43,16 +43,16 @@
    <div class="main">
       <div class="ui">
         <h3>JsonUI</h3><hr/>
-        <div class="json-ui" ng-controller="jsonUIController as jsonUI">
+        <div class="json-ui">
           <a ng-href="{{jsonUI.jsonLink}}" download="jsonui.json" class="download" ng-click="jsonUI.getDownloadLink()">Export</a>
           <form>
-            <object class="root" id="json-wrap">
+            <object class="root" id="json-wrap" ng-init="jsonUI.init()">
             </object>
           </form>
         </div>
       </div>
 
-      <div class="button-area" ng-controller="jsonUIController as jsonUI">
+      <div class="button-area">
         <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
         <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
       </div>
