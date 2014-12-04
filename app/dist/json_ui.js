@@ -22982,7 +22982,7 @@ var styleDirective = valueFn({
   function jsonUIcontroller($scope, $element, $compile, objectService, 
     valueService, arrayService, parserService, convertService, AppConfig) {
     
-    var uiScope = angular.element(document.querySelector('#json-wrap'));
+    var uiScope;
     var jsonValue = null;
     var jsonObject;
     var jsonKeyValue;
@@ -22996,7 +22996,7 @@ var styleDirective = valueFn({
     vm.getDownloadLink = getDownloadLink;
     vm.json = {};
     vm.jsonLink = "#";
-    vm.init = init;
+    vm.config = config;
     window.removeSelf = removeSelf;
     window.replace = replace;
     window.addObject = addObject;
@@ -23005,8 +23005,13 @@ var styleDirective = valueFn({
     getObject();
     getValue();
     getArray();
+    init(); 
 
-    function init () {
+    function init() {
+      uiScope = angular.element(document.querySelector(AppConfig.id));
+    }
+
+    function config() {
       if (AppConfig.initialSync) {
         toJsonUI(); 
       }
