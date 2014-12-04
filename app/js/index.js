@@ -4,7 +4,6 @@
 angular.module('json.ui')
   .config(function (AppConfigProvider) {
     AppConfigProvider.set({
-      id: '#json-ui',
       initialSync : true
     });
 });

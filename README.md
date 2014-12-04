@@ -77,7 +77,9 @@ Default Initialization
 ```javascript
 angular.module('json.ui')
   .config(function (AppConfigProvider) {
-    AppConfigProvider.set({});
+    AppConfigProvider.set({
+        id: '#json-ui'
+    });
 });
 ```
 Alter options
@@ -95,6 +97,7 @@ angular.module('json.ui')
 
 | Options         | value       | default             | explain                                   |example|
 |-----------------|--------------|---------------------|--------------------------------------------|--------------------------------------------|
+| id | element id (string) | '#json-ui'             | 'json-ui': set root object id ||
 | initialSync | true / false | false               | true: Json-ui and Raw json synchronization when page load ||
 
 ## Develop
