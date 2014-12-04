@@ -27,10 +27,8 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
 <body ng-controller="jsonUIController as jsonUI">
 
 <div class="json-ui">
-      <form>
-        <object class="root" id="json-wrap" ng-init="jsonUI.init()">
-        </object>
-      </form>
+    <object class="root" id="json-ui" ng-init="jsonUI.config()">
+    </object>
 </div>
 ```
 **Set raw json editor in page**
@@ -44,10 +42,8 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
 **Set json-ui <-> raw-json buttons in page**
 
 ```html
-<div class="button-area" ng-controller="jsonUIController as jsonUI">
-        <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
-        <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
-</div>
+<button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
+<button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
 ```
 
 **Set export json link**
