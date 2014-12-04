@@ -98,3 +98,9 @@ hr {
 
 .ui form {
   width: 800px; }
+
+a.download {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  top: -38px; }
