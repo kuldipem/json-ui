@@ -48,6 +48,19 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
         <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
 </div>
 ```
+
+**Set Init json**
+
+```json
+var initJson =  {
+                   "Name": "Robert",
+                   "Family": ["Dad", "Mom", "Sister", "ME"],
+                   "Home": {"Country": "Taiwan", "City": "Tainan"}
+                };
+
+editor.init(initJson);
+```
+
 ## Develop
 
 First run the following command (installing bower `npm install -g bower`)
