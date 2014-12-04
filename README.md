@@ -24,10 +24,11 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
 
 ```html
 <html ng-app="json.ui">
+<body ng-controller="jsonUIController as jsonUI">
 
 <div class="json-ui">
       <form>
-        <object class="root" id="ui-main">
+        <object class="root" id="json-wrap" ng-init="jsonUI.init()">
         </object>
       </form>
 </div>
@@ -55,9 +56,9 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
  <a ng-href="{{jsonUI.jsonLink}}" download="jsonui.json" ng-click="jsonUI.getDownloadLink()">Export</a>
 ```
 
-### javascripts
+### Initialization
 
-**Set Init json**
+**Initialize Raw Json**
 
 ```json
 var initJson =  {
@@ -68,6 +69,33 @@ var initJson =  {
 
 editor.init(initJson);
 ```
+
+**Initialize json-ui**
+
+Default Initialization
+
+```javascript
+angular.module('json.ui')
+  .config(function (AppConfigProvider) {
+    AppConfigProvider.set({});
+});
+```
+Alter options
+
+```javascript
+angular.module('json.ui')
+  .config(function (AppConfigProvider) {
+    AppConfigProvider.set({
+      initialSync : true
+    });
+});
+```
+
+###Options
+
+| Options         | value       | default             | explain                                   |example|
+|-----------------|--------------|---------------------|--------------------------------------------|--------------------------------------------|
+| initialSync | true / false | true                | true: Json-ui and Raw json synchronization when page load ||
 
 ## Develop
 
