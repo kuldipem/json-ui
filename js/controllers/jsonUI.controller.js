@@ -14,8 +14,13 @@
     var jsonArray;
     var element;
 
-    this.toRawJson = toRawJson;
-    this.toJsonUI = toJsonUI;
+    var vm = this; 
+
+    vm.toRawJson = toRawJson;
+    vm.toJsonUI = toJsonUI;
+    vm.getDownloadLink = getDownloadLink;
+    vm.json = {};
+    vm.jsonLink = "#";
     window.removeSelf = removeSelf;
     window.replace = replace;
     window.addObject = addObject;
@@ -24,12 +29,9 @@
     getObject();
     getValue();
     getArray();
-    init();
 
-    function init(config) {
-      toJsonUI(); 
-    }
-    
+    toJsonUI();
+
     function getObject() {
       objectService.getObject()
         .success(function (data) {
@@ -111,6 +113,7 @@
     function toRawJson() {
       var rawJson = parserService.parseUI(uiScope);
       jsonEditor.setValue(rawJson);
+      return rawJson;
     }
 
     function toJsonUI() {
@@ -121,7 +124,18 @@
         var jsonDOM = convertService.toDocument(rawJson, json);
         uiScope.empty();
         uiScope.append(jsonDOM);
+        return jsonDOM;
       }
+      return null;
+    }
+
+    function getDownloadLink() { 
+      vm.json = toRawJson();
+      var blob = new Blob([vm.json], {type: "application/json"});
+      var url  = URL.createObjectURL(blob);
+
+      vm.jsonLink = url;
+      return url;
     }
   }
 
