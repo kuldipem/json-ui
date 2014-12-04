@@ -9,6 +9,14 @@ var jsonUIController = require("../js/controllers/jsonUI.controller");
 var app = angular.module('json.ui', ['ngRoute'])
                  .controller('jsonUIController', jsonUIController);
 
+app.config(['$compileProvider', config]);
+
+config.$inject = ['$compileProvider'];
+
+function config($compileProvider) {   
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
+}
+
 require("../js/services/object.service");
 require("../js/services/value.service");
 require("../js/services/array.service");
