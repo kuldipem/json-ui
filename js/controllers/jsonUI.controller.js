@@ -5,10 +5,10 @@
   var jsonEditor = require("../editor")();
 
   function jsonUIcontroller($scope, $element, $compile, objectService, 
-    valueService, arrayService, parserService, convertService) {
-
+    valueService, arrayService, parserService, convertService, AppConfig) {
+    
     var uiScope = angular.element(document.querySelector('#json-wrap'));
-    var jsonValue;
+    var jsonValue = null;
     var jsonObject;
     var jsonKeyValue;
     var jsonArray;
@@ -21,6 +21,7 @@
     vm.getDownloadLink = getDownloadLink;
     vm.json = {};
     vm.jsonLink = "#";
+    vm.init = init;
     window.removeSelf = removeSelf;
     window.replace = replace;
     window.addObject = addObject;
@@ -30,7 +31,11 @@
     getValue();
     getArray();
 
-    toJsonUI();
+    function init () {
+      if (AppConfig.initialSync) {
+        toJsonUI(); 
+      }
+    }
 
     function getObject() {
       objectService.getObject()
@@ -69,7 +74,7 @@
 
       var selectType = sel.value;
       var thisDOM = angular.element(sel);
-
+      
       if(selectType === 'value') {
         thisDOM.after(jsonValue);
       }
