@@ -22980,10 +22980,10 @@ var styleDirective = valueFn({
   var jsonEditor = require("../editor")();
 
   function jsonUIcontroller($scope, $element, $compile, objectService, 
-    valueService, arrayService, parserService, convertService) {
-
+    valueService, arrayService, parserService, convertService, AppConfig) {
+    
     var uiScope = angular.element(document.querySelector('#json-wrap'));
-    var jsonValue;
+    var jsonValue = null;
     var jsonObject;
     var jsonKeyValue;
     var jsonArray;
@@ -22996,6 +22996,7 @@ var styleDirective = valueFn({
     vm.getDownloadLink = getDownloadLink;
     vm.json = {};
     vm.jsonLink = "#";
+    vm.init = init;
     window.removeSelf = removeSelf;
     window.replace = replace;
     window.addObject = addObject;
@@ -23005,7 +23006,11 @@ var styleDirective = valueFn({
     getValue();
     getArray();
 
-    toJsonUI();
+    function init () {
+      if (AppConfig.initialSync) {
+        toJsonUI(); 
+      }
+    }
 
     function getObject() {
       objectService.getObject()
@@ -23044,7 +23049,7 @@ var styleDirective = valueFn({
 
       var selectType = sel.value;
       var thisDOM = angular.element(sel);
-
+      
       if(selectType === 'value') {
         thisDOM.after(jsonValue);
       }
@@ -23234,12 +23239,25 @@ var jsonUIController = require("../js/controllers/jsonUI.controller");
 var app = angular.module('json.ui', ['ngRoute'])
                  .controller('jsonUIController', jsonUIController);
 
-app.config(['$compileProvider', config]);
+app.config(init);
+app.provider('AppConfig', AppConfig);
 
-config.$inject = ['$compileProvider'];
+init.$inject = ['$compileProvider'];
 
-function config($compileProvider) {   
+function init($compileProvider) {   
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
+}
+
+function AppConfig() {
+  var _opt = {}
+  return {
+    set: function (settings) {
+      _opt = settings;
+    },
+    $get: function () {
+      return _opt;
+    }
+  };
 }
 
 require("../js/services/object.service");
