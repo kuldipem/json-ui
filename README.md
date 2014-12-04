@@ -49,6 +49,14 @@ get js from `./dist/json_ui.js`, css from `./app/css/json_ui.css` and all views 
 </div>
 ```
 
+**Set export json link**
+
+```html
+ <a ng-href="{{jsonUI.jsonLink}}" download="jsonui.json" ng-click="jsonUI.getDownloadLink()">Export</a>
+```
+
+### javascripts
+
 **Set Init json**
 
 ```json
