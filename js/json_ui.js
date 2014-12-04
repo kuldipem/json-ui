@@ -19,15 +19,24 @@ function init($compileProvider) {
 }
 
 function AppConfig() {
-  var _opt = {}
+  var _opt = {
+    id: '#json-ui'
+  }
+
   return {
     set: function (settings) {
-      _opt = settings;
+      update(settings)
     },
     $get: function () {
       return _opt;
     }
   };
+
+  function update(settings) {
+    for(var i in settings) {
+      _opt[i] = settings[i];
+    }
+  }
 }
 
 require("../js/services/object.service");
