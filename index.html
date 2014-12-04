@@ -44,6 +44,7 @@
       <div class="ui">
         <h3>JsonUI</h3><hr/>
         <div class="json-ui">
+          <a ng-href="{{jsonUI.jsonLink}}" download="jsonui.json" class="download" ng-click="jsonUI.getDownloadLink()">Export</a>
           <form>
             <object class="root" id="json-wrap">
             </object>
@@ -54,7 +55,6 @@
       <div class="button-area" ng-controller="jsonUIController as jsonUI">
         <button class="to-json-raw" ng-click="jsonUI.toRawJson()">></button>
         <button class="to-json-ui" ng-click="jsonUI.toJsonUI()"><</button>
-        <a ng-href="{{jsonUI.jsonLink}}" download="jsonui.json" class="download" ng-click="jsonUI.getDownloadLink()">Export</a>
       </div>
 
       <div class="raw_json">
