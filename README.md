@@ -95,7 +95,7 @@ angular.module('json.ui')
 
 | Options         | value       | default             | explain                                   |example|
 |-----------------|--------------|---------------------|--------------------------------------------|--------------------------------------------|
-| initialSync | true / false | true                | true: Json-ui and Raw json synchronization when page load ||
+| initialSync | true / false | false               | true: Json-ui and Raw json synchronization when page load ||
 
 ## Develop
 
