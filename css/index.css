@@ -101,6 +101,6 @@ hr {
 
 a.download {
   position: relative;
-  float: right;
   margin-right: 20px;
+  left: 34%;
   top: -38px; }

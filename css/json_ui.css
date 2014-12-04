@@ -1,7 +1,7 @@
 /*This scss should put only json-ui styles*/
 .json-ui {
   height: 82%;
-  width: auto; }
+  width: 1360px; }
   .json-ui form {
     padding: 10px;
     overflow: visible; }
